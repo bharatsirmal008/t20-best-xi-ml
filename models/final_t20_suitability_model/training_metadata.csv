@@ -1,0 +1,2 @@
+model,training_rows,training_features,original_train_rows,validation_rows_added,test_used,validation_rmse_before_refit,validation_mae_before_refit,validation_r2_before_refit
+HistGradientBoosting,16288,200,13782,2506,False,0.2565903837404385,0.2183907823428002,0.0228033378465178

@@ -1,0 +1,41 @@
+﻿# Python virtual environment
+.venv_api/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter / notebook cache
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Docker temporary files
+docker-compose.override.yml
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Test / coverage cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Streamlit cache
+.streamlit/secrets.toml
