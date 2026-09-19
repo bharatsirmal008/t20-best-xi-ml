@@ -1,0 +1,15 @@
+{
+  "comparison": "train_vs_test",
+  "train_rows": 95937,
+  "test_rows": 33076,
+  "train_date_min": "2008-04-20",
+  "train_date_max": "2021-10-13",
+  "test_date_min": "2024-04-11",
+  "test_date_max": "2026-05-01",
+  "features_checked": 51,
+  "low_drift_features": 33,
+  "moderate_drift_features": 4,
+  "high_drift_features": 14,
+  "max_psi": 10.235632703797165,
+  "mean_psi": 1.2168992619957901
+}
