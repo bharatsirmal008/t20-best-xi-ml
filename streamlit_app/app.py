@@ -1588,7 +1588,8 @@ def score_squad_with_match_context(
     selected_venue,
     pitch_type,
     toss_winner,
-    toss_decision
+    toss_decision,
+    opponent_team_id=None
 ):
 
     model = data["model"]
@@ -1692,6 +1693,27 @@ def score_squad_with_match_context(
         model_input[
             "venue_standard"
         ] = selected_venue
+
+    # Opponent team is a trained model feature
+    if (
+        "opponent_team_id"
+        in raw_features
+        and mode == "IPL"
+    ):
+
+        if opponent_team_id is None:
+            raise ValueError(
+                "Opponent team must be selected for IPL mode."
+            )
+
+        if int(opponent_team_id) == int(selection_value):
+            raise ValueError(
+                "Opponent team cannot be the same as the selected IPL team."
+            )
+
+        model_input[
+            "opponent_team_id"
+        ] = int(opponent_team_id)
 
     for col in categorical_features:
 
@@ -2399,6 +2421,13 @@ with st.sidebar:
     )
 
     # --------------------------------------------------------
+    # OPPONENT DEFAULTS
+    # --------------------------------------------------------
+
+    opponent_team_name = None
+    opponent_team_id = None
+
+    # --------------------------------------------------------
     # IPL TEAM
     # --------------------------------------------------------
 
@@ -2453,6 +2482,36 @@ with st.sidebar:
         st.caption(
             f"Internal ID: {selected_team_id}"
         )
+
+        # --------------------------------------------------------
+        # OPPONENT TEAM
+        # --------------------------------------------------------
+
+        opponent_options = {
+            team_name: team_id
+            for team_name, team_id
+            in team_options.items()
+            if team_id != selected_team_id
+        }
+
+        opponent_team_name = st.selectbox(
+            "Opponent team",
+            sorted(
+                opponent_options.keys()
+            )
+        )
+
+        opponent_team_id = (
+            opponent_options[
+                opponent_team_name
+            ]
+        )
+
+        if opponent_team_id == selected_team_id:
+            st.error(
+                "Opponent team must be different from the selected IPL team."
+            )
+            st.stop()
 
     # --------------------------------------------------------
     # COUNTRY
