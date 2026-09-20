@@ -1,0 +1,9 @@
+﻿{
+  "audit_type": "xi_selection_fairness",
+  "team_match_groups": 328,
+  "baseline_selection_rate": 0.109082,
+  "demographic_parity_difference": 0.233333,
+  "equalized_odds_difference": 1.0,
+  "historical_selection_target": "participation_proxy",
+  "official_playing_xi_field_available": false
+}

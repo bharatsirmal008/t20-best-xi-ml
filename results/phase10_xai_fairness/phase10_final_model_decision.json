@@ -1,0 +1,9 @@
+﻿{
+  "decision": "RETAIN_BASELINE_PRODUCTION_MODEL",
+  "baseline_mae": 0.225539,
+  "baseline_rmse": 0.265098,
+  "mitigation_mae": 0.225684,
+  "mitigation_rmse": 0.265237,
+  "selection_fairness_improved": false,
+  "reason": "The mitigation candidate slightly worsened predictive error and did not improve the main XI-selection disparity metrics."
+}

@@ -1,0 +1,11 @@
+﻿{
+  "audit_type": "regression_fairness",
+  "grouping_attribute": "country",
+  "test_examples": 2103,
+  "country_groups": 12,
+  "supported_groups": 7,
+  "overall_mae": 0.225539,
+  "overall_rmse": 0.265098,
+  "mean_prediction": 0.455478,
+  "mean_actual": 0.454753
+}

@@ -4219,6 +4219,79 @@ if (
 
 
         # --------------------------------------------------------
+        # XI selection fairness summary
+        # --------------------------------------------------------
+        selection_summary_file = (
+            FAIRNESS_DIR
+            / "xi_selection_fairness_summary.json"
+        )
+
+        if selection_summary_file.exists():
+
+            try:
+
+                with open(
+                    selection_summary_file,
+                    "r",
+                    encoding="utf-8"
+                ) as f:
+                    selection_summary = json.load(f)
+
+                st.markdown(
+                    "#### XI-selection fairness summary"
+                )
+
+                selection_summary_rows = [
+                    {
+                        "Metric": "Team-match groups",
+                        "Value": selection_summary.get(
+                            "team_match_groups",
+                            "Unavailable"
+                        )
+                    },
+                    {
+                        "Metric": "Baseline selection rate",
+                        "Value": (
+                            f"{selection_summary.get('baseline_selection_rate', 0) * 100:.4f}%"
+                        )
+                    },
+                    {
+                        "Metric": "Demographic parity difference",
+                        "Value": selection_summary.get(
+                            "demographic_parity_difference",
+                            "Unavailable"
+                        )
+                    },
+                    {
+                        "Metric": "Equalized odds difference",
+                        "Value": selection_summary.get(
+                            "equalized_odds_difference",
+                            "Unavailable"
+                        )
+                    }
+                ]
+
+                st.dataframe(
+                    pd.DataFrame(
+                        selection_summary_rows
+                    ),
+                    width="stretch",
+                    hide_index=True
+                )
+
+                st.info(
+                    "The historical XI-selection audit uses a "
+                    "participation proxy because an official "
+                    "historical Playing XI field was not available."
+                )
+
+            except Exception as e:
+
+                st.warning(
+                    f"Could not load XI-selection fairness summary: {e}"
+                )
+
+        # --------------------------------------------------------
         # Final model decision
         # --------------------------------------------------------
         if decision_file.exists():
