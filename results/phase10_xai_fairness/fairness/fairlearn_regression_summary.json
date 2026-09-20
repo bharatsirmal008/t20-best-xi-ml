@@ -1,4 +1,4 @@
-﻿{
+{
   "audit_type": "regression_fairness",
   "grouping_attribute": "country",
   "test_examples": 2103,

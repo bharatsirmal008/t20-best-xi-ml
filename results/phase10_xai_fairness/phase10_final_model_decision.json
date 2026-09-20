@@ -1,4 +1,4 @@
-﻿{
+{
   "decision": "RETAIN_BASELINE_PRODUCTION_MODEL",
   "baseline_mae": 0.225539,
   "baseline_rmse": 0.265098,
