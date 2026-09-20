@@ -1,0 +1,201 @@
+processed_feature,mean_abs_shap
+numeric__pre_recent5_batting_runs,0.008606764439944212
+numeric__pre_batting_runs,0.008392727420941003
+numeric__pre_team_batting_runs,0.006197269263642759
+numeric__pre_recent5_bowling_balls,0.005253024480381152
+numeric__is_india_eligible_x,0.005155028908019309
+numeric__pre_recent5_bowling_economy,0.0036189022843927917
+numeric__pre_bowling_economy,0.0029280020092283554
+numeric__pre_recent5_batting_balls,0.0028469073784275125
+numeric__pre_team_matches,0.00238089155871586
+categorical__country_South Africa,0.0019462238256222994
+numeric__pre_team_days_since_last_match,0.0018344398846060425
+numeric__pre_recent5_venue_avg_runs,0.0017270754669656628
+numeric__pre_bowling_wickets,0.0015362265322146772
+numeric__pre_team_bowling_economy,0.0015330522170311418
+numeric__pre_days_since_last_match,0.001503131758754822
+numeric__pre_opponent_match_count,0.001281946096884073
+numeric__pre_batting_balls,0.001217888257550599
+numeric__pre_player_matches,0.0011494124816644944
+numeric__pre_team_match_count,0.0010933531447531197
+numeric__pre_team_batting_strike_rate,0.0010780709344196107
+categorical__opponent_team_id_129,0.001047725011758829
+numeric__pre_player_team_matches,0.0010280907009065053
+numeric__pre_batting_innings,0.0009374552973841433
+numeric__pre_recent5_venue_avg_wickets,0.0008838559569633597
+categorical__playing_role_clean_Allrounder,0.0008636244013930941
+numeric__pre_batting_strike_rate,0.0008287058985257555
+numeric__pre_season_team_matches,0.0006967061419919556
+numeric__pre_recent5_bowling_runs,0.0006865187858173809
+numeric__pre_venue_avg_runs,0.00064066247797651
+numeric__pre_player_team_usage_rate,0.0006323281078397736
+categorical__team_id_129,0.000544548958316238
+numeric__pre_bowling_innings,0.0004985980676060551
+numeric__pre_team_bowling_balls,0.0004904517837342972
+numeric__pre_team_bowling_runs,0.00048122211644755126
+numeric__pre_venue_match_count,0.0004634246499372729
+numeric__pre_team_vs_opponent_matches,0.000452536239882336
+categorical__bowling_style_Unknown,0.0004204039877261521
+numeric__pre_team_bowling_wickets,0.000390756095939829
+numeric__pre_team_batting_balls,0.0003755658719156121
+numeric__pre_recent5_batting_strike_rate,0.00030655106336707354
+numeric__pre_team_batting_innings,0.0002655165251287724
+numeric__season_days_elapsed,0.0002261530265701574
+categorical__playing_role_clean_Batsman,0.0002099512853497608
+categorical__source_role_Batter,0.00018855777081840645
+numeric__pre_team_venue_matches,0.00015144472484185934
+numeric__pre_bowling_runs,0.00015019523667391188
+numeric__pre_bowling_balls,0.00010061866230448036
+numeric__pre_venue_avg_wickets,9.997861647311287e-05
+categorical__opponent_team_id_3,7.739410972756893e-05
+numeric__pre_bowling_average,7.016218890388302e-05
+categorical__bowling_style_Legbreak googly,6.815983330709243e-05
+numeric__pre_season_opponent_matches,5.924884524535626e-05
+categorical__season_2017,5.8176161575292716e-05
+categorical__batting_style_Left-hand bat,5.800309530819041e-05
+categorical__playing_role_clean_Wicketkeeper-Batsman,5.061204697753076e-05
+categorical__city_Bengaluru,4.062359872250463e-05
+categorical__season_2011,3.930035071741493e-05
+categorical__season_2018,3.8725591346605404e-05
+categorical__opponent_team_id_6,3.2692919052864396e-05
+categorical__season_2012,2.720841461250148e-05
+categorical__venue_standard_Saurashtra Cricket Association Stadium,2.1412025168614718e-05
+categorical__country_England,2.0177979562531556e-05
+categorical__venue_standard_Kingsmead,1.956339902973313e-05
+numeric__pre_team_bowling_innings,1.7814940911921333e-05
+categorical__venue_standard_Punjab Cricket Association IS Bindra Stadium,1.682994053901449e-05
+categorical__venue_standard_Sharjah Cricket Stadium,1.6403192045780468e-05
+categorical__team_id_134,1.3517508102123712e-05
+numeric__is_wicketkeeper_x,1.2606246731291193e-05
+categorical__venue_standard_MA Chidambaram Stadium,1.1930692351468351e-05
+categorical__team_id_252,9.65480251733371e-06
+numeric__pre_has_team_bowling_history,0.0
+numeric__is_wicketkeeper_y,0.0
+categorical__opponent_team_id_252,0.0
+categorical__opponent_team_id_2,0.0
+categorical__opponent_team_id_1419,0.0
+categorical__opponent_team_id_1414,0.0
+categorical__opponent_team_id_134,0.0
+categorical__opponent_team_id_1,0.0
+categorical__team_id_6,0.0
+categorical__team_id_5,0.0
+categorical__team_id_2,0.0
+categorical__team_id_494,0.0
+categorical__team_id_4,0.0
+categorical__team_id_3,0.0
+categorical__team_id_1414,0.0
+categorical__team_id_1419,0.0
+numeric__is_india_eligible_y,0.0
+categorical__team_id_1,0.0
+numeric__pre_has_team_batting_history,0.0
+numeric__pre_recent5_bowling_wickets,0.0
+numeric__pre_has_batting_history,0.0
+numeric__pre_has_bowling_history,0.0
+numeric__pre_has_recent5_history,0.0
+categorical__venue_standard_Green Park,0.0
+categorical__venue_standard_Eden Gardens,0.0
+categorical__venue_standard_Feroz Shah Kotla,0.0
+categorical__venue_standard_Buffalo Park,0.0
+categorical__venue_standard_De Beers Diamond Oval,0.0
+categorical__venue_standard_Dr DY Patil Sports Academy,0.0
+categorical__venue_standard_Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,0.0
+categorical__opponent_team_id_5,0.0
+categorical__venue_standard_Arun Jaitley Stadium,0.0
+categorical__opponent_team_id_494,0.0
+categorical__opponent_team_id_4,0.0
+"categorical__venue_standard_Sardar Patel Stadium, Motera",0.0
+categorical__venue_standard_Rajiv Gandhi International Stadium,0.0
+categorical__venue_standard_Shaheed Veer Narayan Singh International Stadium,0.0
+categorical__venue_standard_Sawai Mansingh Stadium,0.0
+categorical__venue_standard_St George's Park,0.0
+categorical__venue_standard_Subrata Roy Sahara Stadium,0.0
+categorical__venue_standard_SuperSport Park,0.0
+categorical__venue_standard_Sheikh Zayed Stadium,0.0
+"categorical__venue_standard_Vidarbha Cricket Association Stadium, Jamtha",0.0
+categorical__venue_standard_Wankhede Stadium,0.0
+categorical__city_Abu Dhabi,0.0
+"categorical__venue_standard_Zayed Cricket Stadium, Abu Dhabi",0.0
+categorical__city_Ahmedabad,0.0
+categorical__city_Bangalore,0.0
+categorical__city_Bloemfontein,0.0
+categorical__city_Cape Town,0.0
+categorical__city_Centurion,0.0
+categorical__city_Chandigarh,0.0
+categorical__city_Chennai,0.0
+categorical__venue_standard_Dubai International Cricket Stadium,0.0
+categorical__venue_standard_JSCA International Stadium Complex,0.0
+categorical__venue_standard_M Chinnaswamy Stadium,0.0
+categorical__venue_standard_Holkar Cricket Stadium,0.0
+categorical__venue_standard_Himachal Pradesh Cricket Association Stadium,0.0
+"categorical__venue_standard_Narendra Modi Stadium, Ahmedabad",0.0
+categorical__venue_standard_Maharashtra Cricket Association Stadium,0.0
+categorical__venue_standard_Nehru Stadium,0.0
+categorical__venue_standard_New Wanderers Stadium,0.0
+categorical__venue_standard_OUTsurance Oval,0.0
+categorical__venue_standard_Newlands,0.0
+categorical__venue_standard_Barabati Stadium,0.0
+categorical__venue_standard_Brabourne Stadium,0.0
+categorical__city_Kochi,0.0
+categorical__city_Kimberley,0.0
+categorical__city_Kanpur,0.0
+categorical__city_Johannesburg,0.0
+categorical__city_Jaipur,0.0
+categorical__city_Indore,0.0
+categorical__city_Hyderabad,0.0
+categorical__city_East London,0.0
+categorical__city_Durban,0.0
+categorical__city_Dubai,0.0
+categorical__city_Dharamsala,0.0
+categorical__city_Delhi,0.0
+categorical__city_Cuttack,0.0
+categorical__city_Pune,0.0
+categorical__city_Kolkata,0.0
+categorical__city_Mumbai,0.0
+categorical__season_2013,0.0
+categorical__season_2010,0.0
+categorical__season_2008,0.0
+categorical__season_2015,0.0
+categorical__season_2016,0.0
+categorical__season_2019,0.0
+categorical__season_2020/21,0.0
+categorical__season_2014,0.0
+categorical__city_Ranchi,0.0
+categorical__city_Rajkot,0.0
+categorical__city_Sharjah,0.0
+categorical__city_Visakhapatnam,0.0
+categorical__season_2009,0.0
+categorical__city_Raipur,0.0
+categorical__city_Nagpur,0.0
+categorical__city_Port Elizabeth,0.0
+categorical__country_New Zealand,0.0
+categorical__country_Netherlands,0.0
+categorical__country_Nepal,0.0
+categorical__country_India,0.0
+categorical__country_Bangladesh,0.0
+categorical__country_Australia,0.0
+categorical__country_Afghanistan,0.0
+categorical__season_2021,0.0
+categorical__batting_style_Right-hand bat,0.0
+categorical__bowling_style_Left-arm fast,0.0
+categorical__bowling_style_Left-arm medium,0.0
+categorical__country_Sri Lanka,0.0
+categorical__country_United States of America,0.0
+categorical__country_West Indies,0.0
+categorical__country_Zimbabwe,0.0
+categorical__country_Pakistan,0.0
+categorical__bowling_style_Right-arm fast,0.0
+categorical__bowling_style_Right-arm bowler,0.0
+categorical__bowling_style_Legbreak,0.0
+categorical__bowling_style_Left-arm medium-fast,0.0
+categorical__bowling_style_Left-arm fast-medium,0.0
+categorical__bowling_style_Right-arm fast-medium,0.0
+"categorical__bowling_style_Right-arm medium, Right-arm offbreak",0.0
+categorical__bowling_style_Right-arm medium,0.0
+categorical__bowling_style_Slow left-arm orthodox,0.0
+categorical__bowling_style_Slow left-arm chinaman,0.0
+"categorical__bowling_style_Right-arm offbreak, Legbreak googly",0.0
+categorical__bowling_style_Right-arm offbreak,0.0
+categorical__bowling_style_Right-arm medium-fast,0.0
+categorical__playing_role_clean_Bowler,0.0
+categorical__source_role_All-rounder,0.0
+categorical__source_role_Bowler,0.0
