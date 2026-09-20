@@ -1216,21 +1216,30 @@ def predict_best_xi(
 # TEAM DISPLAY NAMES
 # ------------------------------------------------------------
 
+CURRENT_IPL_TEAM_IDS = [
+    3,     # Mumbai Indians
+    129,   # Chennai Super Kings
+    1,     # Royal Challengers Bengaluru
+    6,     # Kolkata Knight Riders
+    252,   # Delhi Capitals
+    134,   # Rajasthan Royals
+    2,     # Sunrisers Hyderabad
+    494,   # Punjab Kings
+    614,   # Lucknow Super Giants
+    615    # Gujarat Titans
+]
+
 IPL_TEAM_NAMES = {
-    1: "Royal Challengers Bengaluru",
-    2: "Sunrisers Hyderabad",
     3: "Mumbai Indians",
-    4: "Rising Pune Supergiant",
-    5: "Gujarat Lions",
-    6: "Kolkata Knight Riders",
     129: "Chennai Super Kings",
-    134: "Rajasthan Royals",
+    1: "Royal Challengers Bengaluru",
+    6: "Kolkata Knight Riders",
     252: "Delhi Capitals",
+    134: "Rajasthan Royals",
+    2: "Sunrisers Hyderabad",
     494: "Punjab Kings",
     614: "Lucknow Super Giants",
-    615: "Gujarat Titans",
-    1414: "Kochi Tuskers Kerala",
-    1419: "Pune Warriors"
+    615: "Gujarat Titans"
 }
 
 # ------------------------------------------------------------
@@ -2395,13 +2404,19 @@ with st.sidebar:
 
     if mode == "IPL":
 
-        valid_team_ids = (
+        catalog_team_ids = set(
             data[
                 "team_catalog"
             ]["team_id"]
             .astype(int)
             .tolist()
         )
+
+        valid_team_ids = [
+            team_id
+            for team_id in CURRENT_IPL_TEAM_IDS
+            if team_id in catalog_team_ids
+        ]
 
         team_options = {}
 
@@ -4375,7 +4390,7 @@ else:
 
     cards[1].metric(
         "Verified Teams",
-        "14"
+        "10"
     )
 
     cards[2].metric(
