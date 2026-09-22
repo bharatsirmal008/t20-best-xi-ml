@@ -8,6 +8,7 @@ import json
 import numpy as np
 import pandas as pd
 import streamlit as st
+from dashboard_ui import apply_theme, header, sidebar_brand, welcome, lineup_cards, ground_view
 
 from scipy.optimize import milp, LinearConstraint, Bounds
 
@@ -21,6 +22,9 @@ st.set_page_config(
     page_icon="🏏",
     layout="wide"
 )
+
+# Follow the active Streamlit light/dark theme for all dashboard surfaces.
+apply_theme()
 
 
 # ============================================================
@@ -2373,15 +2377,6 @@ def validate_manual_xi(
 # PAGE
 # ============================================================
 
-st.title(
-    "🏏 T20 Best Playing XI Predictor"
-)
-
-st.caption(
-    "Eligible squad → Match context → "
-    "ML suitability → Optimized XI → User confirmation"
-)
-
 try:
 
     data = prepare_data()
@@ -2394,6 +2389,8 @@ except Exception as e:
 
     st.stop()
 
+header()
+
 
 # ============================================================
 # SIDEBAR
@@ -2401,8 +2398,10 @@ except Exception as e:
 
 with st.sidebar:
 
+    sidebar_brand()
+
     st.header(
-        "1. Selection"
+        "01 · Choose your team"
     )
 
     selection_mode_label = st.radio(
@@ -2479,9 +2478,6 @@ with st.sidebar:
             selected_team_id
         )
 
-        st.caption(
-            f"Internal ID: {selected_team_id}"
-        )
 
         # --------------------------------------------------------
         # OPPONENT TEAM
@@ -2545,7 +2541,7 @@ with st.sidebar:
     st.divider()
 
     st.header(
-        "2. Match Context"
+        "02 · Match context"
     )
 
     venue_options = (
@@ -2612,7 +2608,7 @@ with st.sidebar:
 
 
     st.header(
-        "3. Squad"
+        "03 · Build your squad"
     )
 
     # --------------------------------------------------------
@@ -3293,9 +3289,8 @@ with st.sidebar:
 # MAIN AREA
 # ============================================================
 
-st.subheader(
-    "4. AI Best XI"
-)
+if "final_xi" in st.session_state:
+    st.subheader("Your selection overview")
 
 if generate:
 
@@ -3357,7 +3352,8 @@ if generate:
                     selected_venue=selected_venue,
                     pitch_type=pitch_type,
                     toss_winner=toss_winner,
-                    toss_decision=toss_decision
+                    toss_decision=toss_decision,
+                    opponent_team_id=opponent_team_id
                 )
             )
 
@@ -3528,8 +3524,10 @@ if (
     # --------------------------------------------------------
 
     st.subheader(
-        "🤖 AI Selected Best XI"
+        "Your recommended playing XI"
     )
+
+    lineup_cards(xi)
 
     xi_display = xi[
         [
@@ -3571,6 +3569,9 @@ if (
     # --------------------------------------------------------
     # FINAL USER SELECTION
     # --------------------------------------------------------
+
+    # Interactive field arrangement for the recommended players.
+    ground_view(xi)
 
     st.subheader(
         "5. Review / Confirm Final XI"
@@ -4433,46 +4434,4 @@ if (
     )
 
 else:
-
-    st.info(
-        "Select an IPL team or country, enter the match "
-        "context, upload the squad, and click "
-        "**Generate Best XI**."
-    )
-
-    cards = st.columns(3)
-
-    cards[0].metric(
-        "Player Master",
-        "4,827"
-    )
-
-    cards[1].metric(
-        "Verified Teams",
-        "10"
-    )
-
-    cards[2].metric(
-        "Countries",
-        "43"
-    )
-
-    st.subheader(
-        "System Workflow"
-    )
-
-    st.markdown(
-        """
-        **1. Select team/country**
-
-        **2. Enter venue, pitch and toss**
-
-        **3. Upload the eligible squad**
-
-        **4. ML scores only those players**
-
-        **5. Optimizer selects exactly 11**
-
-        **6. Review and confirm the final XI**
-        """
-    )
+    welcome(data)
